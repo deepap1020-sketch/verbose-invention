@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P. Deepa's Portfolio</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, pink, blue, black);
+            color: white;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        section {
+            display: none;
+            padding: 40px;
+        }
+
+        section.active {
+            display: block;
+        }
+
+        .info-box {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 10px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        .know-more-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: pink;
+            color: black;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>P. Deepa's Portfolio</h1>
+    </header>
+
+    <nav>
+        <a onclick="showSection('home')">Home</a>
+        <a onclick="showSection('about')">About Me</a>
+        <a onclick="showSection('skills')">Skills & Certificates</a>
+        <a onclick="showSection('contact')">Contact</a>
+    </nav>
+
+    <section id="home" class="active">
+        <h2>Welcome!</h2>
+        <p>Hello, I am <strong>P. Deepa</strong>, currently pursuing my <strong>2nd Year BCA</strong> at Arcot Sri Mahaalakshmi Women's College.</p>
+        <button class="know-more-button" onclick="showSection('about')">Know More</button>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="info-box">
+            <p><strong>Education:</strong></p>
+            <ul>
+                <li>BCA - 2nd Year</li>
+                <li>Arcot Sri Mahaalakshmi Women's College</li>
+                <li>Gangadhara Matric HR Sec School</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>Skills & Certificates</h2>
+        <div class="info-box">
+            <p><strong>Skills:</strong></p>
+            <ul>
+                <li>C++</li>
+                <li>Python</li>
+            </ul>
+
+            <p><strong>Certificate:</strong></p>
+            <ul>
+                <li>Kabaddi</li>
+            </ul>
+
+            <p><strong>Hobbies:</strong></p>
+            <ul>
+                <li>Dancing</li>
+                <li>Tennis</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <div class="info-box">
+            <p><strong>Email:</strong> deepa.p1020@gmail.com</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 P. Deepa</p>
+    </footer>
+
+    <script>
+        function showSection(sectionId) {
+            document.querySelectorAll('section').forEach(section => {
+                section.classList.remove('active');
+            });
+            document.getElementById(sectionId).classList.add('active');
+        }
+    </script>
+
+</body>
+
+</html>
